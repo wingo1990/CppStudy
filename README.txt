@@ -1,0 +1,4 @@
+const_cast：主要是针对指针和引用，去掉他们原有的const属性
+
+使用const_cast去除const限定的目的不是为了修改它的内容
+使用const_cast去除const限定，通常是为了函数能够接受这个实际参数：即是形参不带const属性，实参带const属性。

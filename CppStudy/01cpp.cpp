@@ -3,14 +3,14 @@ using namespace std;
 
 int main(void)
 {
-	const volatile int a = 100;
+	const volatile int a = 100;				// 在没有volatile的时候，C++采用的优化，用到a替换成100
 
 	int *p = const_cast<int*>(&a);
 
 	*p = 200;
 
-//	cout << "&a = "<<&a<<endl;
-//	cout << "p = " <<p<<endl;
+	cout << "&a = "<<&a<<endl;
+	cout << "p = " <<p<<endl;
 
 	cout <<"a1 = "<<a<<endl;				//a 用volatile 修饰打印的就一样了？
 	cout <<"a2 = "<<*(int*)&a<<endl;
@@ -23,9 +23,11 @@ int main(void)
 	int *q = const_cast<int*>(b);
 
 	*q = 200;
-	cout << b << q <<endl;
-	cout <<*b <<*q <<endl;
+	cout << "b= "<< b <<endl;
+	cout << "q= "<< q <<endl;
 
+	cout <<"*b="<<*b <<endl;
+	cout <<"*q="<<*q <<endl;
 
 	return 0;
 }
