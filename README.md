@@ -25,6 +25,7 @@ Singleton模式：
 
 04cpp：
 主要学习了new(关键字)、 operator new(函数) 以及 operator new的重载。
+http://www.cnblogs.com/luxiaoxun/archive/2012/08/10/2631812.html
 
 void *operator new(size_t size);						//operator new 的原型
 void delete (void *p);
