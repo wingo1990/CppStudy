@@ -45,3 +45,8 @@ void delete(void *p, char *file, long line);
 一般只调用delete即是普通的delete，不会找到那个相应的。
 
 new operator = operator new + 构造函数。
+
+05cpp：
+工厂模式的实现
+
+注意看你面的注释。
