@@ -50,3 +50,11 @@ new operator = operator new + 构造函数。
 工厂模式的实现
 
 注意看你面的注释。
+
+06cpp :
+main：单例模式 auto_ptr(模板)
+main1：
+#define sizeof_v(x)  ((char*)(&x+1) - (char*)&x )		//变量大小
+#define sizeof_t(X)  (size_t)((X*)0 + 1 )				//类型大小
+								
+#define ALIGN(v, b) ( (v+b-1) & ~(b-1) )				//对齐，对于内存池很有用 
