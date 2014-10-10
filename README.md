@@ -55,6 +55,28 @@ new operator = operator new + 构造函数。
 main：单例模式 auto_ptr(模板)
 main1：
 #define sizeof_v(x)  ((char*)(&x+1) - (char*)&x )		//变量大小
-#define sizeof_t(X)  (size_t)((X*)0 + 1 )				//类型大小
+#define sizeof_t(X)  (size_t)((X*)0 + 1)				//类型大小
 								
-#define ALIGN(v, b) ( (v+b-1) & ~(b-1) )				//对齐，对于内存池很有用 
+#define ALIGN(v, b)  ((v+b-1) & ~(b-1))				//对齐，对于内存池很有用
+
+07cpp：
+学习简单的io操作
+io分为三种：
+标准io：对标准的输入输出设备的输入输出
+	cin cout cerr clog
+文件io：对外部存储中的文件的输入输出操作
+	ifstream ofstream fstream
+	filebuf
+串io：  对内存中的一块字符串的输入输出操作。
+	istringstream ostringstream stringstream
+	stringbuf
+
+main: 文本格式打开与二进制格式打开的区别。
+		windows： 写入'\n'会转换成'\r\n'
+		linux :   '\n'不变，也就说在linux环境中文本格式打开和二进制格式打开时一样的。
+		mac ：     '\n' 会转换成'\r'。
+		'\r'无论在哪个系统中都不会转换的。
+
+main1： 错误的读写字符串方式。
+main2： 正确方式之一。
+
