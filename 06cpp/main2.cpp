@@ -4,7 +4,7 @@ using namespace std;
 #define sizeof_v(x)  ((char*)(&x+1) - (char*)&x )		//变量大小
 #define sizeof_t(X)  (size_t)((X*)0 + 1 )				//类型大小
 								
-#define ALIGN(v, b) ( (v+b-1) & ~(b-1) )				//对齐，对于内存池很有用 
+#define ALIGN(v, b)  ((v+b-1) & ~(b-1))				//对齐，对于内存池很有用 
 
 int main(void)
 {
