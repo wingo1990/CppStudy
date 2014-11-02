@@ -50,6 +50,8 @@ new operator = operator new + 构造函数。
 05cpp：
 工厂模式的实现
 
+什么事工厂模式：
+
 注意看你面的注释。
 
 06cpp :
@@ -58,7 +60,7 @@ main1：
 #define sizeof_v(x)  ((char*)(&x+1) - (char*)&x )		//变量大小
 #define sizeof_t(X)  (size_t)((X*)0 + 1)				//类型大小
 								
-#define ALIGN(v, b)  ((v+b-1) & ~(b-1))				//对齐，对于内存池很有用
+#define ALIGN(v, b)  ((v+b-1) & ~(b-1))					//对齐，对于内存池很有用
 
 07cpp：
 学习简单的io操作
@@ -118,4 +120,35 @@ main03：成员模板函数，类是模板了，在类中在还可以引入新的类型，定义模板函数。
 		具体的推倒见代码。
 main04：typename的用法，对于类型参数使用有着重要的意思。
 
+*******
+代码重用方式：
+函数，内联函数，宏定义。
+继承(追求编程效率) MFC就是用的这种方式；	组合方式。
+模板(追求运行效率，过多的事情让编译器做了。) 类类型参数的使用 构成了适配器的概念，如stack适配了deque，这种效率要比继承的方式高。
 
+面向对象与泛型都依赖于某种形式的多态。
+面向对象： 动态多态  虚函数		运行时决定函数入口地址
+泛型编程： 静态多态  模板			编译后决定了函数入口地址
+
+*******
+
+11cpp:
+	模板的单例模式学习
+	线程安全的单例模式类：普通锁、double check lock、pthread_once(linux)
+
+12cpp:
+	Mysql　Ｃ++ Connector example.
+	1. mysql-workbench-community-6.0.9-win32
+	2. mysql-connector-c1.0.5-winx64（没用啊）
+	3. mysql-5.5.40-winx64
+
+	source code： 
+	mysql-connector-c++-1.1.4
+	boost_1_54_0
+	MySQL Server 5.5[含有include和lib文件夹] 换位置，并更名为 MySQL_Server_5.5
+	使用cmake-3.0.2转换成Visual Studio 2012版工程，编译成dll文件。
+	过程：  1. set MYSQL_DIR=/path/to/Mysql_Server_5.5
+		2. set BOOST_ROOT=/path/to/boost_1_34_0
+			 注意中间不要有空格。
+		3. cmake -G "Visual Studio 11 Win64"
+		最后生成sln文件使用VS-2012打开。

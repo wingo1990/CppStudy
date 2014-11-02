@@ -69,16 +69,16 @@ public:
 	}
 };
 
-#define REGISTER_CLASS(ClassName) \
+#define REGISTER_CLASS(ClassName)	\
 class ClassName##Register{	\
-public: \
-	static void *NewInstance() \
-	{ \
-	return new ClassName; \
-	} \
-private: \
-static RegisterMap _reg; \
-}; \
+public:	\
+	static void *NewInstance()	\
+	{	\
+		return new ClassName;	\
+	}	\
+private:	\
+static RegisterMap _reg;	\
+};	\
 RegisterMap ClassName##Register::_reg(#ClassName, ClassName##Register::NewInstance);
 
 #endif //_DYNFACTORY_H_
