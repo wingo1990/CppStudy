@@ -152,3 +152,6 @@ main04：typename的用法，对于类型参数使用有着重要的意思。
 			 注意中间不要有空格。
 		3. cmake -G "Visual Studio 11 Win64"
 		最后生成sln文件使用VS-2012打开。
+
+ClassTest:
+	table类的实现。
