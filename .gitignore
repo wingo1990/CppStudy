@@ -17,7 +17,7 @@
 *.log
 [Bb]in
 [Dd]ebug*/
-*.lib
+
 *.sbr
 obj/
 [Rr]elease*/
@@ -28,3 +28,8 @@ _ReSharper*/
 *.vcxproj
 *.filters
 *.ipch
+*.cmake
+*.bin
+*.stamp
+*.depend
+CMakefiles/
