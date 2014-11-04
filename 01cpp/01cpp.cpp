@@ -3,23 +3,23 @@ using namespace std;
 
 int main(void)
 {
-	volatile const int a = 100;				// ÔÚÃ»ÓĞvolatileµÄÊ±ºò£¬C++²ÉÓÃµÄÓÅ»¯£¬ÓÃµ½aÌæ»»³É100
+	volatile const int a = 100;				// åœ¨æ²¡æœ‰volatileçš„æ—¶å€™ï¼ŒC++é‡‡ç”¨çš„ä¼˜åŒ–ï¼Œç”¨åˆ°aæ›¿æ¢æˆ100
 
 	int *p = const_cast<int*>(&a);
 
-	*p = 200;
+	*p = 500;
 
 	cout << "&a = "<<(int*)&a<<endl;
 	cout << "p = " <<p<<endl;
 
-	cout <<"a1 = "<<a<<endl;				//a ÓÃvolatile ĞŞÊÎ´òÓ¡µÄ¾ÍÒ»ÑùÁË,¿ÉÒÔ±£Ö¤aÊÇ´æÄÚ´æÖĞ¶Á£¬²»ÊÇ´Ó·ûºÅ±íÖĞ¶ÁÈ¡¡£
+	cout <<"a1 = "<<a<<endl;				//a ç”¨volatile ä¿®é¥°æ‰“å°çš„å°±ä¸€æ ·äº†,å¯ä»¥ä¿è¯aæ˜¯å­˜å†…å­˜ä¸­è¯»ï¼Œä¸æ˜¯ä»ç¬¦å·è¡¨ä¸­è¯»å–ã€‚
 	cout <<"a2 = "<<*(int*)&a<<endl;
 	cout <<"*p = "<<*p<<endl;
 
-	//ÏÂÃæÕâ¸öÀı×ÓÊÇºÏÀíµÄ£¬¶øÉÏÃæµÄÔòÊÇ²»ºÏÀíµÄ£¬Æä¾ßÌåÔ­ÒòÊÇ£º
-	//const_castÆäÒª×ª»»µÄ¶ÔÏóÊ±Ö¸ÕëºÍÒıÓÃ²ÅÓĞÒâÒå¡£
+	//ä¸‹é¢è¿™ä¸ªä¾‹å­æ˜¯åˆç†çš„ï¼Œè€Œä¸Šé¢çš„åˆ™æ˜¯ä¸åˆç†çš„ï¼Œå…¶å…·ä½“åŸå› æ˜¯ï¼š
+	//const_castå…¶è¦è½¬æ¢çš„å¯¹è±¡æ—¶æŒ‡é’ˆå’Œå¼•ç”¨æ‰æœ‰æ„ä¹‰ã€‚
 
-	//Ö¸Õë
+	//æŒ‡é’ˆ
 	const int *b = new int(100);
 	int *q = const_cast<int*>(b);
 
@@ -30,7 +30,7 @@ int main(void)
 	cout <<"*b="<<*b <<endl;
 	cout <<"*q="<<*q <<endl;
 
-	//ÒıÓÃ
+	//å¼•ç”¨
 	volatile const int i = 100;
 	int &j = const_cast<int &>(i);
 	cout << "before &i = " << (int*)&i <<endl;
@@ -46,7 +46,7 @@ int main(void)
  
 
 
-	//×Ô¶¨Òå
+	//è‡ªå®šä¹‰
 	class MyClass
 	{
 	public:
