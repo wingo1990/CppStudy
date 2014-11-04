@@ -155,3 +155,5 @@ main04：typename的用法，对于类型参数使用有着重要的意思。
 
 ClassTest:
 	table类的实现。
+
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
