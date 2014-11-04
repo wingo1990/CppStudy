@@ -7,7 +7,7 @@ int main(void)
 
 	int *p = const_cast<int*>(&a);
 
-	*p = 200;
+	*p = 700;
 
 	cout << "&a = "<<(int*)&a<<endl;
 	cout << "p = " <<p<<endl;
