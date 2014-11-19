@@ -33,3 +33,11 @@ _ReSharper*/
 *.stamp
 *.depend
 CMakefiles/
+ClassTest/uml.md~
+ClassTest/uml.mdl
+CppStudy.vsmdi
+Local.testsettings
+*.lib
+*.dll
+ClassTest/contacts
+TraceAndTestImpact.testsettings

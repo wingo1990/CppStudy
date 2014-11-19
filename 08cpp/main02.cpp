@@ -3,9 +3,18 @@
 
 using namespace std;
 
-double StrToDouble(string &str)
+//double StrToDouble(string &str)
+//{
+//	double temp;
+//	istringstream iss(str);
+//	iss >> temp;
+//	return temp;
+//}
+
+template <typename T>
+T StrTo(string& str)
 {
-	double temp;
+	T temp;
 	istringstream iss(str);
 	iss >> temp;
 	return temp;
@@ -25,8 +34,11 @@ int main()
 	str = DoubleToStr(val);
 	cout << str << endl;
 
-	double valt = StrToDouble(str);
+	double valt = StrTo<int>(str);
 	cout << valt << endl;
+
+	double i = StrTo<double>(str);
+	cout << i << endl;
 
 	return 0;
 }
