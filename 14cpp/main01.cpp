@@ -1,7 +1,4 @@
-#include <iostream>
-#include <regex>
-
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
@@ -97,12 +94,24 @@ int main()
 	//cout << sm[2] << endl;
 	//////////////////////////////////////////////////////////////////////////
 
-	void *str1 = new string;
-	void *str2 = new string;
+	//void *str1 = new string;
+	//void *str2 = new string;
 
-	*(string*)str1 = "Hello world!";
-	cout << *(string*)str1 <<endl;
+	//*(string*)str1 = "Hello world!";
+	//cout << *(string*)str1 <<endl;
 
-	*(string*)str2 = *(string*)str1;
-	cout << *(string*)str2 << endl;
+	//*(string*)str2 = *(string*)str1;
+	//cout << *(string*)str2 << endl;
+	//////////////////////////////////////////////////////////////////////////
+
+	//printf("\n\n\n\n\n\n\n\n\n\n"
+	//	   "Hello World!");
+	//////////////////////////////////////////////////////////////////////////
+
+	unsigned short usLen = 0;
+	unsigned char ucLen[2] = {0x12, 0x34};
+
+	usLen = ucLen[0] + (ucLen[1]<<8);
+
+	printf("%4x\n", usLen);
 }
